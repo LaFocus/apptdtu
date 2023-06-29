@@ -1,0 +1,40 @@
+.footer {
+  background: var(--accent);
+  height: 40vh;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      color: var(--bg);
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    &-link {
+      color: var(--bg);
+      margin-bottom: 10px;
+      transition: 150ms;
+    }
+
+    &-link:hover {
+      color: gray;
+    }
+
+  }
+}
+
+.hiddenText {
+  background: var(--accent);
+
+  &__inner {
+    color: white;
+  }
+}

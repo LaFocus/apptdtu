@@ -1,0 +1,107 @@
+.header {
+  padding: 25px 0;
+  background: var(--accent);
+  
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    // position: fixed;
+
+    &-info {
+      display: flex;
+      gap: 20px;
+    }
+
+    &-tel {
+      color: var(--bg);
+      font-size: 20px;
+    }
+    &-mail {
+      color: var(--bg);
+      font-size: 20px;
+    }
+    &-lang {
+      color: var(--bg);
+      font-size: 20px;
+    }
+    &-link {
+      color: var(--bg);
+      font-size: 20px;
+    }
+  }
+
+  &__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bg);
+    height: 300px;
+
+    &__logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      & img {
+        max-width: 110px;
+      }
+    
+      &-title {
+        max-width: 450px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+.intro {
+  background: var(--accent2);
+  padding: 100px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &-img {
+      width: 140px;
+    }
+
+    &-title {
+      max-width: 350px;
+      width: 100%;
+      color: var(--bg);
+      position: relative;
+    }
+
+    &-span {
+      position: absolute;
+      color: rgb(194, 194, 194);
+      bottom: -20px;
+      left: 0;
+      font-size: 14px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+
+    &-item {
+      color: var(--bg);
+      transition: 150ms;
+    }
+
+    &-item:hover {
+      color: rgb(194, 194, 194);
+    }
+  }
+}
