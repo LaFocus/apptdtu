@@ -223,6 +223,12 @@
         transform: none;
         max-height: 250px;
       }
+      @include media(460) {
+        max-height: 300px;
+      }
+      @include media(380) {
+        max-height: 350px;
+      }
     }
 
     &__item:nth-child(3) {

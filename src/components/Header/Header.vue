@@ -65,7 +65,7 @@ export default {
     return {
       hidden: true,
       shownStyle: 'left: 0;',
-      hiddenStyle: 'left: 100%;',
+      hiddenStyle: 'left: 110%;',
       display: ' display: flex',
       style: ''
     }

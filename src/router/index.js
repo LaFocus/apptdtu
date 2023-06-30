@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from "@/views/Home.vue";
+
 function load(component) {
   return () => import(`@/views/${component}.vue`)
 }
@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: load('Home')
     },
     {
       path: '/process',
