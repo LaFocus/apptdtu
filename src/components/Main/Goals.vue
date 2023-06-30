@@ -7,7 +7,7 @@
           {{ item.goal }}
         </div>
       </div>
-      <img src="@/assets/images/allfamily.jpg" alt="">
+      <img class="goals-img" src="@/assets/images/allfamily.jpg" alt="">
     </div>
   </div>
 </template>

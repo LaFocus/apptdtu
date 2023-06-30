@@ -1,11 +1,26 @@
+@mixin media($size) {
+  @media screen and (max-width: #{$size}px) {
+    @content
+  }
+}
+
 .footer {
   background: var(--accent);
   height: 40vh;
+
+  @include media(800) {
+    padding: 50px 0;
+    height: max-content;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media(800) {
+      flex-direction: column;
+    }
   }
 
   &__contacts {
@@ -18,16 +33,32 @@
       margin-bottom: 30px;
     }
 
-    &-link {
-      color: var(--bg);
-      margin-bottom: 10px;
-      transition: 150ms;
-    }
+    &-info {
+      display: flex;
+      flex-direction: column;
 
-    &-link:hover {
-      color: gray;
-    }
+      &-link {
+        color: var(--bg);
+        margin-bottom: 10px;
+        transition: 150ms;
+      }
 
+      &-link:hover {
+        color: gray;
+      }
+
+      @include media(800) {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    @include media(800) {
+      margin-top: 50px;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 

@@ -17,8 +17,10 @@
 
       <div class="footer__contacts">
         <h3 class="footer__contacts-title">Contact with us</h3>
-        <a class="footer__contacts-link" href="tel:+998712271716" @contextmenu="getHidden">Телефон: +998 (71) 227-17-16</a>
-        <a class="footer__contacts-link" href="mailto:app-tgtu@мail.ru">Эл. почта: app-tgtu@мail.ru</a>
+        <div class="footer__contacts-info">
+          <a class="footer__contacts-info-link" href="tel:+998712271716" @contextmenu="getHidden">Телефон: +998 (71) 227-17-16</a>
+          <a class="footer__contacts-info-link" href="mailto:app-tgtu@мail.ru">Эл. почта: app-tgtu@мail.ru</a>
+        </div>
       </div>
     </div>
   </footer>

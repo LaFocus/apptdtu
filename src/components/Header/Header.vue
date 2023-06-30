@@ -7,8 +7,10 @@
           <a href="tel:+998712468242" class="header__top-tel">Тел. доверия: +998 71 246-82-42,</a>
           <a href="tel:+998712469236" class="header__top-tel">+998 71 246-92-36</a>
           <a href="mailto:" class="header__top-mail">Webmail.tdtu.uz</a>
-          <button class="header__top-lang">RU</button>
         </div>
+        <a href="tel:+998712468242, +998712469236" class="header__top-info-phone">
+          Позвонить
+        </a>
       </div>
     </div>
 
@@ -31,7 +33,11 @@
       </div>
     </router-link>
 
-    <nav class="intro__nav">
+    <nav class="intro__nav" :style="style">
+      
+      <router-link class="intro__nav-item" to="/"
+      >Главная</router-link
+      >
       <router-link class="intro__nav-item" to="/baccalaureate"
       >Бакалавриат</router-link
       >
@@ -41,14 +47,40 @@
       <router-link class="intro__nav-item" to="/process"
         >Учебный процесс</router-link
       >
+
+      <button class="intro__nav-btn" @click="closeStyle">
+        <img src="@/assets/images/close.png" alt="">
+      </button>
     </nav>
+    <button class="intro-btn" @click="showNav">
+      <img src="@/assets/images/menu.png" alt="">
+    </button>
   </div>
 </div>
 </template>
 
 <script>
 export default {
-  
+  data() {
+    return {
+      hidden: true,
+      shownStyle: 'left: 0;',
+      hiddenStyle: 'left: 100%;',
+      display: ' display: flex',
+      style: ''
+    }
+  },
+  computed: {
+
+  },
+  methods: {
+    showNav() {
+      this.style = this.shownStyle + this.display
+    },
+    closeStyle() {
+      this.style = this.hiddenStyle
+    }
+  }
 }
 </script>
 

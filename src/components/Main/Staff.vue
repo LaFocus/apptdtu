@@ -3,11 +3,7 @@
     <div class="container staff__inner">
       <h2 class="staff-title">Профессорско-преподавательский состав</h2>
       <div class="staff__item">
-        <img
-          src="@/assets/images/nophoto.png"
-          class="staff__item-img"
-          alt=""
-        />
+        <img src="@/assets/images/nophoto.png" class="staff__item-img" alt="" />
         <div class="staff__item__info">
           <p class="staff__item__info-text">Юсупбeкoв Aзизбeк Нoдирбeкoвич</p>
           <p class="staff__item__info-text">Должность: Заведующий кафедрой</p>
@@ -26,6 +22,7 @@
         :space-between="20"
         :navigation="true"
         :modules="modules"
+        :breakpoints="swiperOptions.breakpoints"
       >
         <swiper-slide v-for="(item, i) in staff" class="staff__items">
           <img
@@ -57,8 +54,26 @@ export default {
     return {
       staff: staff,
       modules: [Navigation],
+      swiperOptions: {
+        breakpoints: {
+          1920: {
+            slidesPerView: 5
+          },
+          1140: {
+            slidesPerView: 4
+          },
+          780: {
+            slidesPerView: 3
+          },
+          460: {
+            slidesPerView: 2
+          },
+          320: {
+            slidesPerView: 1
+          }
+        },
+      },
     };
   },
 };
-
 </script>
